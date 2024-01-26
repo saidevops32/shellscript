@@ -4,7 +4,7 @@ ID=$(id -u)
 
 if [ $ID -ne 0 ]
 then
-  echo "error: you are not root user become root user"
+  echo "error: you are not a root user become root user"
   exit 1
 else
   echo " you are a root user"   
@@ -18,3 +18,4 @@ then
   exit 1
 else
   echo "inatalling mysql is success "
+fi  
