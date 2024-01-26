@@ -2,10 +2,11 @@
 
 number=$1
 
-if (20 = $number) {
+if [20 = $number]
+then 
     echo "given number equal to 20"
-}
-else {
+
+else 
     echo " given number not equal to 20 "
-}
+
 fi
