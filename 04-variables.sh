@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "enter arguments as to get person1 name and person 2 name"
+
 person1=$1
 person2=$2
 
