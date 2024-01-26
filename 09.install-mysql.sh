@@ -4,7 +4,7 @@ ID=$(id -u)
 
 if [ $ID -ne 0 ]
 then
-  echo "error: you are not user become root user"
+  echo "error: you are not root user become root user"
   exit 1
 else
   echo " you are a root user"   
