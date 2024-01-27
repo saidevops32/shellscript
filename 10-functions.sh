@@ -2,7 +2,7 @@
 
 ID=$(id -u)
 
-VAIDATE(){
+VALIDATE(){
    if [ $1 -ne 0 ] 
     then
       echo "instaling $2 is failed"
