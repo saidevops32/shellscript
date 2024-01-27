@@ -12,10 +12,10 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 VALIDATE(){
    if [ $1 -ne 0 ] 
    then
-       echo "instaling $2 is $R failed $N"
+       echo -e "instaling $2 is $R failed $N"
        exit 1
    else
-       echo "installing $2 is $R success $N "
+       echo -e "installing $2 is $R success $N "
    fi  
 }
    
