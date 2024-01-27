@@ -9,6 +9,8 @@ N="\e[0m"
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
+echo "script started excuting at $TIMESTAMP" &>> LOGFILE
+
 VALIDATE(){
    if [ $1 -ne 0 ] 
    then
