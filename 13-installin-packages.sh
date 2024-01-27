@@ -8,12 +8,13 @@ N=\e[0m
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-VAIDATE (){
+VAIDATE(){
     if [$1 -ne 0]
     then
       echo "$2 is ..$R failed $N"
     else
       echo "$2 iS.. $G success $N"  
+    fi  
 }
 
 echo "script started excuting $TIMESATMP"
