@@ -4,12 +4,12 @@ ID=$(id -u)
 
 VALIDATE(){
    if [ $1 -ne 0 ] 
-    then
-        echo "instaling $2 is failed"
-        exit 1
-    else
-        echo "inatalling $2 is success "
-    fi  
+   then
+       echo "instaling $2 is failed"
+       exit 1
+   else
+       echo "inatalling $2 is success "
+   fi  
 }
    
 if [ $ID -ne 0 ]
