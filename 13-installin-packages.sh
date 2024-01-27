@@ -10,6 +10,8 @@ N="\e[0m"
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
+echo "script started excuting $TIMESATMP"
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
@@ -19,8 +21,6 @@ VALIDATE(){
          echo -e "$2 iS.. $G success $N"  
     fi  
 }
-
-echo "script started excuting $TIMESATMP"
 
 if [ $ID -ne 0 ]
 then
@@ -32,7 +32,7 @@ fi
 
 for package in $@
 do
-  yum list installed $package
+  yum list installed $package  &>> $LOGFILE
   if [ $? -ne 0 ]
   then 
        yum install $package -y &>> $LOGFILE
