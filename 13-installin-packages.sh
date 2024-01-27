@@ -9,19 +9,19 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VAIDATE(){
-    if [$1 -ne 0]
+    if [ $1 -ne 0 ]
     then
-      echo "$2 is ..$R failed $N"
+      echo -e "$2 is ..$R failed $N"
     else
-      echo "$2 iS.. $G success $N"  
+      echo -e "$2 iS.. $G success $N"  
     fi  
 }
 
 echo "script started excuting $TIMESATMP"
 
-if [$ID -ne 0]
+if [ $ID -ne 0 ]
 then
-  echo "error : you are not a root user $R become root user $N"
+  echo -e "error : you are not a root user $R become root user $N"
   exit 1
 else
   echo "you are a root user"
@@ -30,7 +30,7 @@ fi
 for package in $@
 do
   yum list installed $package
-  if [$? -ne 0 ]
+  if [ $? -ne 0 ]
   then 
     yum install $package &>> $LOGFILE
     VALIDATE $? installing $package
